@@ -54,7 +54,7 @@ These two types of tables allow data to be organized (into "schemas") and search
 
 ##Schemas- how to organize data into tables
 
-Data is organized based on three fundamental relationships.  If you can recognize these you can figure out how many tables you need and how to define them:
+Data is organized using these two types of tables and three fundamental relationships.  If you can recognize these you can figure out how many tables you need and how to define them:
 
 ###1 to 1: 
 A musician has a 1 to 1 relationship to his/her *first_name*,  *last_name*, *age*, perhaps a *main_instrument*. A band signs with a *label*.
