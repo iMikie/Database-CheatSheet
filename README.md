@@ -15,7 +15,7 @@ Specifying a simple set of rules for getting data in and out of tables can make 
 
  **Type 1)**  
  In each row there is at least one item that is unique, e.g. band name, 
- there is only one "Rolling Stones". (Just to be super sure of the uniqueness rule relational databases give each record a unique ID number.)   Also, each row or record in the table stores the same fixed data as any other.  In this example for band we store name, most popular album, label, ASCAP-number.
+ there is only one "Rolling Stones". (Just to be super sure of the uniqueness rule relational databases give each record a unique ID number.)   Also, each row or record in the table stores the same fixed data as any other.  In this example we store name, most popular album, label, and ASCAP-number for Bands.
  <br>
 
 ID | band-name | most-popular-album |label | ASCAP-number | 
