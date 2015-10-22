@@ -2,10 +2,18 @@
 A quick reference for SQL and relational databases
 <br><br>
 
+For the most part, databases are just tables of information.  
+
+ID | name | address |email 
+---| -------------|---------|-------|------
+1 | Mike Farr | Tiburon, CA | mikefarr@mac.com
+...
+
+It was found that a simple set of rules allowed programmers to create fast and large databases.  Each row in the table has the A record corresponds contains the information for a person: name, address, to a row in the table and 
 
 ####There are two types of tables in relational databases:
   
- **Type 1)** has rows of data in which at least one item is unique, e.g. in a table of bands, each band is unique: i.e. 
+ **Type 1)** has rows of data (records) in which at least one item is unique, e.g. in a table of bands, each band is unique: i.e. 
  there is only one "Rolling Stones".  In the database of bands each band has an ID number.  The database stores the same 
  information for each band.  Likewise, the same is true for a table of musicians.  
   
