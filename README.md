@@ -34,7 +34,7 @@ ID | name | status
 1 | John Lennon | deceased | 
 2 | Paul McCartney | Still Kicking | 
 
-Note that you couldn't store a list of musicians in the Band table because bands have varying numbers of musicians.  In this case you need Relational's type 2 table.
+Note that you couldn't store a list of musicians in the Band table because bands have varying numbers of musicians, anywhere from 12 to hundreds.  In this case you need Relational's type 2 table.
 <br>
  **Type 2)** is a table of relationships, called "junction" or "join" table (not to be confused with the SQL command JOIN).
  It relates unique items in one type 1 table to unique items in another type 1 table.  For example, each band has several 
