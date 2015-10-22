@@ -42,19 +42,15 @@ Note that you couldn't store a list of musicians in the Band table above because
  musicians and in some cases musicians may belong to more than one band.  
 <br>
 
-musician_ID | band_ID
+ID |musician_ID | band_ID
 ------------|--------
-1 | 1
-1 | 3
-2 | 1
-2 | 4
+1| 1 | 1
+2| 1 | 3
+3| 2 | 1
+4| 2 | 4
   <br>
 
-These two types of tables allow data to be organized (into "schemas") and searched and combined using SQL.
-
-##Schemas- how to organize data into tables
-
-Data is organized using these two types of tables and three fundamental relationships.  If you can recognize these you can figure out how many tables you need and how to define them:
+A set of tables is called a schema.  How a schema is searched depends on the relationships between the data.  To be specific Relational DBs define three different relationships. 
 
 ###1 to 1: 
 This is the relationship of our Type 1 table.  A band has a 1 to 1 relationship to it's *name*, *most popular albut*, *record-label*etc. 
