@@ -61,8 +61,7 @@ This is the relationship of our Type 1 table.  A band has a 1 to 1 relationship 
 As another example, an Amazon customer has an *account_ID*, a *main-credit-card*, a *shipping-address*, a *billing-address*.  Note: for items like addresses where most people only have two you can just define *shipping-address* and *billing-address* as two fields.  **1 to 1 data can be represented in a single table.**
 
 ###1 to Many:
-Like a band to its musicians, if each musician only belongs to one band.  This requires two tables, a table of Bands & a table of Musicians.  A field in the Musicians table could be the ID of the band to which they belong.
-
+A person can own many cars but a car may be owned by only one person. This is a one to many.  As another example: if musicians can only belong to one band but a band could contain several musicians then this would also be a one(band) to many(musicians). When you identify a 1 to Many relationship like Band/Musicians you know you will need three tables: a table of Bands, a table of Musicians and a table to relate the two together.  In a similar way we have Many to Many, described below.
 
 ### Many to Many
 Bands in the 70's progressive rock genre (the pinnacle of human musical expression) swapped musicians all the time.  A band had several musicians AND each musician often belonged to more than one band.  To model this as a *relational data base* way requires two tables of type 1 and a third table of type 2 (the relationship or join table ) to relate the two. This is the relationship shown in the tables above.
