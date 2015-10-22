@@ -42,12 +42,12 @@ Note that you couldn't store a list of musicians in the Band table above because
  musicians and in some cases musicians may belong to more than one band.  
 <br>
 
-ID |musician_ID | band_ID
-------------|--------
-1| 1 | 1
-2| 1 | 3
-3| 2 | 1
-4| 2 | 4
+ID | musician_ID | band_ID
+---|---------|--------
+1 | 1 | 1
+2 | 1 | 3
+3 | 2 | 1
+4 | 2 | 4
   <br>
 
 A set of tables is called a schema.  How a schema is searched depends on the relationships between the data.  To be specific Relational DBs define three different relationships. 
