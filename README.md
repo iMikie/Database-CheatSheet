@@ -57,8 +57,8 @@ These two types of tables allow data to be organized (into "schemas") and search
 Data is organized using these two types of tables and three fundamental relationships.  If you can recognize these you can figure out how many tables you need and how to define them:
 
 ###1 to 1: 
-A musician has a 1 to 1 relationship to his/her *first_name*,  *last_name*, *age*, perhaps a *main_instrument*. A band signs with a *label*.
-An Amazon customer has an *account_ID*, a *main-credit-card*.  1 to 1 data can be represented in a single table. 
+This is the relationship of our Type 1 table.  A band has a 1 to 1 relationship to it's *name*, *most popular albut*, *record-label*etc. 
+As another example, an Amazon customer has an *account_ID*, a *main-credit-card*, a *shipping-address*, a *billing-address*.  Note: for items like addresses where most people only have two you can just define *shipping-address* and *billing-address* as two fields.  **1 to 1 data can be represented in a single table.**
 
 ###1 to Many:
 Like a band to its musicians, if each musician only belongs to one band.  This requires two tables, a table of Bands & a table of Musicians.  A field in the Musicians table could be the ID of the band to which they belong.
