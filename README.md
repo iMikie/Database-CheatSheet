@@ -2,22 +2,21 @@
 A quick reference for SQL and relational databases
 <br><br>
 
-For the most part, databases are just tables of information: 
+For the most part, databases are just tables of information: for example for a person: name, address, email. The information in each row is called a record.
 
 ID | name | address |email 
 ---| -------------|---------|-------|------
 1 | Mike Farr | Tiburon, CA | mikefarr@mac.com
 ...
 
-Each row in the table has the a set of information called a record, for example or a person: name, address, email.  It was found that a simple set of rules and a fairly simple query language allowed programmers to create fast and large databases.  One such set of rules defines Relational Databases which uses SQL as it's (Structured) Query Language.   
+Specifying a simple set of rules for getting data in and out of tables can make it easier for programmers to create really fast databases.  One such set of rules defines *Relational Databases*.
 
-####There are two types of tables in relational databases:
-  
- **Type 1)** has rows of data (records) in which at least one item is unique, e.g. in a table of bands, each band is unique: i.e. 
- there is only one "Rolling Stones".  The database stores the same 
- information for each band (name, most popular album, label, ASCAP-number)  To suprer-enforce the uniqueness rule we give each record an ID number.   
-  
-<br>
+###In the Relational Model there are two types of tables:
+
+ **Type 1)**  
+ In each row there is at least one item that is unique, e.g. band name, 
+ there is only one "Rolling Stones". Just to be super sure of the uniqueness rule relational databases give each record a unique ID number.   Also, each row or record in the table stores the same fixed data as any other.  In this example for band we store name, most popular album, label, ASCAP-number.
+ <br>
 
 ID | band-name | most-popular-album |label | ASCAP-number | 
 ---| -------------|---------|-------|------
@@ -26,13 +25,16 @@ ID | band-name | most-popular-album |label | ASCAP-number |
 3 | Plastic Ono | ?  | Apple | 1254-95
 4 | Paul McCartney Band | Band on the Run | Apple | 5747-48
 
- Likewise, could be true for a table of musicians.  
+
+ 
+####Likewise a table of musicians: 
  
 ID | name | status 
 ---| -------------|---------|-------|------
 1 | John Lennon | deceased | 
 2 | Paul McCartney | Still Kicking | 
 
+Note that you couldn't store a list of musicians in the Band table because bands have varying numbers of musicians.  In this case you need Relational's type 2 table.
 <br>
  **Type 2)** is a table of relationships, called "junction" or "join" table (not to be confused with the SQL command JOIN).
  It relates unique items in one type 1 table to unique items in another type 1 table.  For example, each band has several 
