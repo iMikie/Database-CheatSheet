@@ -2,20 +2,20 @@
 A quick reference for SQL and relational databases
 <br><br>
 
-For the most part, databases are just tables of information.  
+For the most part, databases are just tables of information: 
 
 ID | name | address |email 
 ---| -------------|---------|-------|------
 1 | Mike Farr | Tiburon, CA | mikefarr@mac.com
 ...
 
-It was found that a simple set of rules allowed programmers to create fast and large databases.  Each row in the table has the A record corresponds contains the information for a person: name, address, to a row in the table and 
+Each row in the table has the a set of information called a record, for example or a person: name, address, email.  It was found that a simple set of rules and a fairly simple query language allowed programmers to create fast and large databases.  One such set of rules defines Relational Databases which uses SQL as it's (Structured) Query Language.   
 
 ####There are two types of tables in relational databases:
   
  **Type 1)** has rows of data (records) in which at least one item is unique, e.g. in a table of bands, each band is unique: i.e. 
- there is only one "Rolling Stones".  In the database of bands each band has an ID number.  The database stores the same 
- information for each band.  Likewise, the same is true for a table of musicians.  
+ there is only one "Rolling Stones".  The database stores the same 
+ information for each band (name, most popular album, label, ASCAP-number)  To suprer-enforce the uniqueness rule we give each record an ID number.   
   
 <br>
 
@@ -26,6 +26,8 @@ ID | band-name | most-popular-album |label | ASCAP-number |
 3 | Plastic Ono | ?  | Apple | 1254-95
 4 | Paul McCartney Band | Band on the Run | Apple | 5747-48
 
+ Likewise, could be true for a table of musicians.  
+ 
 ID | name | status 
 ---| -------------|---------|-------|------
 1 | John Lennon | deceased | 
