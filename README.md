@@ -1,7 +1,8 @@
 # Relational Databases: the secret story
 ## Michael Farr 2015-2017
+### mikefarr@mac.com
 
-Databases started off as just a collection of tables of information.  Maybe you have a list of people:
+A Database is a collection of tables.  Maybe you have two tables, people:
 
 ID | name | address |email 
 ---|-------------|---------|-------
@@ -16,10 +17,10 @@ ID | deptname | building number | location
 2 | Marketing | 3 | Tiburon, CA
 3 | Executive| 1 | San Francisco, CA
 
-A Database is a collection of tables.
-Relational Databases use just two types of tables.  One stores data, the other has rows that each relates a record (row) in one table with a record in another.  Amazingly that's all that's you can store arbitrarily complex data.  
 
- **Type 1 Tables**  
+Relational Databases use just two types of tables.  One stores data like above, the other has rows that each relates a record (row) in one table with a record in another.  Amazingly that's all that's you can store arbitrarily complex data.  
+
+### Type 1 Tables 
  In each row there is at least one item that is unique, e.g. band name, 
  there is only one "Rolling Stones". (Just to be super sure of the uniqueness rule relational databases give each record a unique ID number.)   Also, each row or record in the table stores the same fixed data as any other.  In this example we store name, most popular album, label, and ASCAP-number for Bands.
  <br>
@@ -43,8 +44,8 @@ ID | name | status
 
 Note that you couldn't store a list of musicians in the Band table above because bands have varying numbers of musicians.  A record for a band might need one musician field on up to a hundred. To make accessing tables fast, though, each row must be the same length.  So in this case you need Relational's type 2 table.
 
-<br>
- **Type 2)** is a table of relationships, called "junction" or "join" table (not to be confused with the SQL command JOIN).
+### Type 2 Tables
+  This type is a table of relationships, called "junction" or "join" table (not to be confused with the SQL command JOIN).
  It relates unique items in one type 1 table to unique items in another type 1 table.  For example, each band has several 
  musicians and in some cases musicians may belong to more than one band.  
 <br>
