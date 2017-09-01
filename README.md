@@ -1,17 +1,15 @@
-# Database-CheatSheet
-A quick reference for SQL and relational databases
-<br><br>
+# Relational Databases: the secret story
+## Michael Farr 2015-2017
 
-For the most part, databases are just tables of information: for example for a person: name, address, email. The information in each row is called a record.
+Databases started off as just tables of information, like a spreadsheet.  A contact database might contain three pieces of info for each person: name, address, email. The information in each row is called a record.
 
 ID | name | address |email 
----| -------------|---------|-------|------
+---|-------------|---------|-------
 1 | Mike Farr | Tiburon, CA | mikefarr@mac.com
+2 | Sam Spade | San Rafael, CA | sam@sam.com
+
 ...
-
-Specifying a simple set of rules for getting data in and out of tables can make it easier for programmers to create really fast databases.  One such set of rules defines *Relational Databases*.
-
-###In the Relational Model there are two types of tables:
+Relational Databases came about when someone realized that with just two types of tables you can store arbitrarily complex data.  Together with a simple set of rulesyou can get data in and out fast.
 
  **Type 1)**  
  In each row there is at least one item that is unique, e.g. band name, 
