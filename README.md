@@ -140,9 +140,11 @@ ARRAY|A set-length and ordered collection of elements
 MULTISET|A variable-length and unordered collection of elements
 XML	|Stores XML data
 
+Each variable can also be declared as NOT NULL, meaning each record is required to have a value for the variable. See name in the CREATE TABLE statement below.
+
 ### CREATE TABLE *tablename*
 ```SQL
-CREATE TABLE bands (id INTEGER, name VARCHAR(64), label VARCHAR(64), 
+CREATE TABLE bands (id INTEGER, name VARCHAR(64) NOT NULL, label VARCHAR(64), 
                     founding_city VARCHAR, created_at DATEIME, updated_at DATETIME);
 	
 CREATE TABLE musicians (id INTEGER, label VARCHAR(64), first_name VARCHAR,
