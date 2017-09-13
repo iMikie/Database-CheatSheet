@@ -144,9 +144,9 @@ CREATE TABLE band-musician (id INTEGER, band_id INTEGER, musician_id INTEGER,
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
 --
-### DESCRIBE *database* statement
+### DESCRIBE *table* statement
 ```SQL
-DESCRIBE table ;
+DESCRIBE musicians ;
 ```
 List the names and data types of the variables (columns) that make up a record in this table.  
 
