@@ -84,13 +84,42 @@ After creating the database you can create tables and add records to the tables
 ```sql
 USE DATABASE BandsAndMembers
 ```
-Switch databases
+Different databases can have tables of the same name so before we can start working with tables we have to tell SQL what DB to use.
 
 ### DROP database statement
 ```sql
 DROP DATABASE MyData
 ```
-Delete the database and all its tables and data.
+You've screwed up and it's time to start all over.  Delete the database and all its tables and data.
+
+### SQL Data Types
+
+Data type|	Description
+---------|-------
+CHARACTER(n)|	Character string. Fixed-length n
+VARCHAR(n) | 
+CHARACTER VARYING(n)|	Character string. Variable length. Maximum length n
+BINARY(n)|	Binary string. Fixed-length n
+BOOLEAN	|Stores TRUE or FALSE values
+VARBINARY(n) |
+BINARY VARYING(n)|	Binary string. Variable length. Maximum length n
+INTEGER(p)|	Integer numerical (no decimal). Precision p
+SMALLINT|Integer numerical (no decimal). Precision 5
+INTEGER|	Integer numerical (no decimal). Precision 10
+BIGINT	|Integer numerical (no decimal). Precision 19
+DECIMAL(p,s)|Exact numerical, precision p, scale s. Example: decimal(5,2) is a number that has 3 digits before the decimal and 2 digits after the decimal
+NUMERIC(p,s)|Exact numerical, precision p, scale s. (Same as DECIMAL)
+FLOAT(p)|Approximate numerical, mantissa precision p. A floating number in base 10 exponential notation. The size argument for this type consists of a single number specifying the minimum precision
+REAL|Approximate numerical, mantissa precision 7
+FLOAT|Approximate numerical, mantissa precision 16
+DOUBLE PRECISION	|Approximate numerical, mantissa precision 16
+DATE|Stores year, month, and day values
+TIME|Stores hour, minute, and second values
+TIMESTAMP|Stores year, month, day, hour, minute, and second values
+INTERVAL|Composed of a number of integer fields, representing a period of time, depending on the type of interval
+ARRAY|A set-length and ordered collection of elements
+MULTISET|A variable-length and unordered collection of elements
+XML	|Stores XML data
 
 ### CREATE TABLE statement
 ```SQL
@@ -107,22 +136,23 @@ CREATE TABLE band-musician (id INTEGER, band_id INTEGER, musician_id INTEGER,
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
 --
-### USE statement
+### DESCRIBE *database* statement
 ```SQL
-USE database musicians ;
+DESCRIBE table ;
 ```
+List the names and data types of the variables (columns) that make up a record in this table.  
 
 ### .schema	
 ```SQL
 Type .schema to the SQL command line find out what's in the database (doesn't work with mysql)
 ```
 ----
-### SELECT statement
+### SELECT *columns* FROM *table* statement
 ```SQL
 SELECT CustomerName,City FROM Customers;
 ```
 ----
-### SELECT DISTINCT Statement
+### SELECT DISTINCT *columns* FROM *table* Statement
 ```SQL
 SELECT DISTINCT City,Country FROM Customers;
 ```
@@ -239,34 +269,7 @@ txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
 *The example above, creates a select statement by adding a variable (txtUserId) to a select string. The variable is fetched from the user input (Request) to the page.*
 
 ----
-### SQL Data Types
 
-Data type|	Description
----------|-------
-CHARACTER(n)|	Character string. Fixed-length n
-VARCHAR(n) | 
-CHARACTER VARYING(n)|	Character string. Variable length. Maximum length n
-BINARY(n)|	Binary string. Fixed-length n
-BOOLEAN	|Stores TRUE or FALSE values
-VARBINARY(n) |
-BINARY VARYING(n)|	Binary string. Variable length. Maximum length n
-INTEGER(p)|	Integer numerical (no decimal). Precision p
-SMALLINT|Integer numerical (no decimal). Precision 5
-INTEGER|	Integer numerical (no decimal). Precision 10
-BIGINT	|Integer numerical (no decimal). Precision 19
-DECIMAL(p,s)|Exact numerical, precision p, scale s. Example: decimal(5,2) is a number that has 3 digits before the decimal and 2 digits after the decimal
-NUMERIC(p,s)|Exact numerical, precision p, scale s. (Same as DECIMAL)
-FLOAT(p)|Approximate numerical, mantissa precision p. A floating number in base 10 exponential notation. The size argument for this type consists of a single number specifying the minimum precision
-REAL|Approximate numerical, mantissa precision 7
-FLOAT|Approximate numerical, mantissa precision 16
-DOUBLE PRECISION	|Approximate numerical, mantissa precision 16
-DATE|Stores year, month, and day values
-TIME|Stores hour, minute, and second values
-TIMESTAMP|Stores year, month, day, hour, minute, and second values
-INTERVAL|Composed of a number of integer fields, representing a period of time, depending on the type of interval
-ARRAY|A set-length and ordered collection of elements
-MULTISET|A variable-length and unordered collection of elements
-XML	|Stores XML data
 
 
 
