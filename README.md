@@ -74,25 +74,33 @@ Bands in the 70's progressive rock genre (the pinnacle of human musical expressi
 ----
 
 # SQL Command Cheatsheet
+
+### SHOW DATABASES 
+```SQL
+SHOW DATABASES ;
+```
+List the databases SQL can access.
+
+----
 ### CREATE DATABASE *databasename*
-```sql
-CREATE DATABASE BandsAndMembers
+```SQL
+CREATE DATABASE BandsAndMembers;
 ```
 After creating the database you can create tables and add records to the tables
 
 ----
 
-### USE database 
-```sql
-USE DATABASE BandsAndMembers
+### USE *databasename* 
+```SQL
+USE BandsAndMembers;
 ```
-Different databases can have tables of the same name so before we can start working with tables we have to tell SQL what DB to use.
+Before we can start working with tables we have to tell SQL what DB to use.
 
 ----
 
 ### DROP database 
-```sql
-DROP DATABASE MyData
+```SQL
+DROP DATABASE MyData;
 ```
 Used to start over. Delete the database and all its tables and data.  
 
@@ -129,7 +137,7 @@ ARRAY|A set-length and ordered collection of elements
 MULTISET|A variable-length and unordered collection of elements
 XML	|Stores XML data
 
-### CREATE TABLE statement
+### CREATE TABLE *tablename*
 ```SQL
 CREATE TABLE bands (id INTEGER, name VARCHAR(64), label VARCHAR(64), 
                     founding_city VARCHAR, created_at DATEIME, updated_at DATETIME);
@@ -143,7 +151,8 @@ CREATE TABLE band-musician (id INTEGER, band_id INTEGER, musician_id INTEGER,
 ```
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
---
+----
+
 ### DESCRIBE *table* 
 ```SQL
 DESCRIBE musicians ;
@@ -179,7 +188,7 @@ AND City='Berlin';
 ### SELECT with WHERE and LIKE
 ```SQL
 SELECT * FROM Customers
-WHERE Country LIKE '%United%'
+WHERE Country LIKE '%United%' ;
 
 ```
 ----
@@ -187,13 +196,13 @@ WHERE Country LIKE '%United%'
 ```SQL
 SELECT column_name, column_name
 FROM table_name
-ORDER BY column_name ASC|DESC, column_name ASC|DESC;
+ORDER BY column_name ASC|DESC, column_name ASC|DESC ;
 ```
 ----
 ### GROUP BY and COUNT
  Give me a count of the number of tracks by unit price
 ```SQL
-SELECT unit_price,count(*) FROM tracks GROUP BY unit_price
+SELECT unit_price,count(*) FROM tracks GROUP BY unit_price ;
 ```
 ----
 
@@ -213,14 +222,14 @@ INSERT INTO "dogs"
 	("license", "name", ...) 
 VALUES 
 	(?, ?, ...) 
-	[["license", "OH-9084736"], ["name", "Taj"], ...]
+	[["license", "OH-9084736"], ["name", "Taj"], ...] ;
 ```
 ----
 ### UPDATE 
 ```SQL
 UPDATE table_name
 SET column1=value1,column2=value2,...
-WHERE some_column=some_value;
+WHERE some_column=some_value ;
 ```
 *Use WHERE to specify which rows to update.*
 
@@ -239,7 +248,7 @@ SELECT regions.region_name, states.state_name
     FROM regions
     INNER JOIN states
     on regions.id=states.region_id
-    ORDER BY regions.id ASC;
+    ORDER BY regions.id ASC ;
 ```
 *Use WHERE to specify which rows to update.*
 
@@ -251,7 +260,7 @@ SELECT customers.first_name, customers.last_name, invoices.total
     INNER JOIN invoices
     on customers.id=invoices.customer_id
     ORDER BY invoices.total DESC
-    LIMIT 1;
+    LIMIT 1 ;
 ```
 *Given a table of customers and a table of invoices, return the customer (and invoice) with the highest invoice total.*
 
@@ -264,7 +273,7 @@ SELECT publishers.name
       on publishers.id=books.publisher_id
      	  JOIN authors
      	  on books.author_id=authors.id
-      WHERE authors.name='Robert Heinlein';
+      WHERE authors.name='Robert Heinlein' ;
 ```
 *Given publishers, books, and authors tables, return the publishers of all books written by Robert Heinlein.
 
@@ -272,7 +281,7 @@ SELECT publishers.name
 ### SQL Injection
 ``` SQL
 txtUserId = getRequestString("UserId");
-txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId ;
 ```
 *The example above, creates a select statement by adding a variable (txtUserId) to a select string. The variable is fetched from the user input (Request) to the page.*
 
