@@ -91,6 +91,9 @@ Different databases can have tables of the same name so before we can start work
 DROP DATABASE MyData
 ```
 You've screwed up and it's time to start all over.  Delete the database and all its tables and data.
+--
+
+Before we can define our tables, we need to know what type of data the records can contain.
 
 ### SQL Data Types
 
