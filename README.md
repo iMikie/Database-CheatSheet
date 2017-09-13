@@ -71,7 +71,7 @@ A person can own many pairs of boxer shorts but each boxer short is (usually) ow
 ### Many to Many
 Bands in the 70's progressive rock genre (the pinnacle of human musical expression) swapped musicians all the time.  A band had several musicians AND each musician often belonged to more than one band.  To model this as a *relational data base* requires two tables of type 1 and a third table of type 2 (the relationship or join table ) to relate the two. This is the relationship shown in the tables above.
 
---
+----
 
 # SQL Command Cheatsheet
 ### CREATE DATABASE
@@ -80,22 +80,27 @@ CREATE DATABASE BandsAndMembers
 ```
 After creating the database you can create tables and add records to the tables
 
+----
+
 ### USE database statement
 ```sql
 USE DATABASE BandsAndMembers
 ```
 Different databases can have tables of the same name so before we can start working with tables we have to tell SQL what DB to use.
 
+----
+
 ### DROP database statement
 ```sql
 DROP DATABASE MyData
 ```
-You've screwed up and it's time to start all over.  Delete the database and all its tables and data.
---
+Used to start over. Delete the database and all its tables and data.  
 
-Before we can define our tables, we need to know what type of data the records can contain.
+----
+
 
 ### SQL Data Types
+Before we can define our tables, we need to know what type of data the records can contain.
 
 Data type|	Description
 ---------|-------
