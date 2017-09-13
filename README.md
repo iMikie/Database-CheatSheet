@@ -74,7 +74,7 @@ Bands in the 70's progressive rock genre (the pinnacle of human musical expressi
 ----
 
 # SQL Command Cheatsheet
-### CREATE DATABASE
+### CREATE DATABASE *databasename*
 ```sql
 CREATE DATABASE BandsAndMembers
 ```
@@ -82,7 +82,7 @@ After creating the database you can create tables and add records to the tables
 
 ----
 
-### USE database statement
+### USE database 
 ```sql
 USE DATABASE BandsAndMembers
 ```
@@ -90,7 +90,7 @@ Different databases can have tables of the same name so before we can start work
 
 ----
 
-### DROP database statement
+### DROP database 
 ```sql
 DROP DATABASE MyData
 ```
@@ -144,7 +144,7 @@ CREATE TABLE band-musician (id INTEGER, band_id INTEGER, musician_id INTEGER,
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
 --
-### DESCRIBE *table* statement
+### DESCRIBE *table* 
 ```SQL
 DESCRIBE musicians ;
 ```
@@ -155,12 +155,12 @@ List the names and data types of the variables (columns) that make up a record i
 Type .schema to the SQL command line find out what's in the database (doesn't work with mysql)
 ```
 ----
-### SELECT *columns* FROM *table* statement
+### SELECT *columns* FROM *table* 
 ```SQL
 SELECT CustomerName,City FROM Customers;
 ```
 ----
-### SELECT DISTINCT *columns* FROM *table* Statement
+### SELECT DISTINCT *columns* FROM *table* 
 ```SQL
 SELECT DISTINCT City,Country FROM Customers;
 ```
@@ -190,14 +190,14 @@ FROM table_name
 ORDER BY column_name ASC|DESC, column_name ASC|DESC;
 ```
 ----
-### SQL GROUP BY and COUNT
+### GROUP BY and COUNT
  Give me a count of the number of tracks by unit price
 ```SQL
 SELECT unit_price,count(*) FROM tracks GROUP BY unit_price
 ```
 ----
 
-### INSERT INTO Statement
+### INSERT INTO 
 ```SQL
 INSERT INTO Customers 
 	(CustomerName, ContactName, Address, City, PostalCode, Country)
@@ -206,7 +206,7 @@ VALUES
 ```
 ----
 
-### Partial INSERT INTO Statement
+### Partial INSERT INTO 
 
 ```SQL
 INSERT INTO "dogs" 
@@ -216,7 +216,7 @@ VALUES
 	[["license", "OH-9084736"], ["name", "Taj"], ...]
 ```
 ----
-### SQL UPDATE Statement
+### UPDATE 
 ```SQL
 UPDATE table_name
 SET column1=value1,column2=value2,...
@@ -225,7 +225,7 @@ WHERE some_column=some_value;
 *Use WHERE to specify which rows to update.*
 
 ----
-### SQL DELETE Statement
+###  DELETE 
 ``` SQL
 DELETE FROM Customers
 WHERE CustomerName='Alfreds Futterkiste' AND ContactName='Maria Anders';
@@ -233,7 +233,7 @@ WHERE CustomerName='Alfreds Futterkiste' AND ContactName='Maria Anders';
 
 ----
 
-### SQL INNER JOIN
+### INNER JOIN
 ```SQL
 SELECT regions.region_name, states.state_name 
     FROM regions
@@ -244,7 +244,7 @@ SELECT regions.region_name, states.state_name
 *Use WHERE to specify which rows to update.*
 
 ----
-### COMPLEX SQL INNER JOIN
+### COMPLEX INNER JOIN
 ```SQL
 SELECT customers.first_name, customers.last_name, invoices.total 
     FROM customers
