@@ -75,34 +75,37 @@ Bands in the 70's progressive rock genre (the pinnacle of human musical expressi
 
 # SQL Command Cheatsheet
 
+----
 ### SHOW DATABASES 
+
 ```SQL
 SHOW DATABASES ;
 ```
-List the databases SQL can access.
+List the databases SQL can access
 
 ----
 ### CREATE DATABASE *databasename*
 ```SQL
-CREATE DATABASE BandsAndMembers;
+CREATE DATABASE BandsAndMembers ;
 ```
 After creating the database you can create tables and add records to the tables
 
 ----
+### USE *databasename*
 
-### USE *databasename* 
 ```SQL
-USE BandsAndMembers;
+USE BandsAndMembers ;
 ```
-Before we can start working with tables we have to tell SQL what DB to use.
+Before we can start working with tables we have to tell SQL what DB to use
 
 ----
 
 ### DROP database 
+
 ```SQL
 DROP DATABASE MyData;
 ```
-Used to start over. Delete the database and all its tables and data.  
+Used to start over. Delete the database and all its tables and data
 
 ----
 
