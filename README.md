@@ -150,8 +150,6 @@ AUTO_INCREMENT | Everytime a record is created, set this variable to 1 more than
 NOT NULL | You can't save the record unless it has a value set for this variable.
 FOREIGN KEY...REFERENCES | This variable's contains the value of a primary key field in another table
 
-If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTO_ INCREMENT.
-
 ----
 
 ### CREATE TABLE *tablename*
