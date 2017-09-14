@@ -146,10 +146,10 @@ Each variable can have attributes.
 Attribute |	Description
 ---------|-------
 PRIMARY KEY | Guarenteed to be unique for each row (record).  
-AUTOINCREMENT | Everytime a record is created, set this variable to 1 more than the previously created record.  
+AUTO_INCREMENT | Everytime a record is created, set this variable to 1 more than the previously created record.  
 NOT NULL | You can't save the record unless it has a value set for this variable.
 
-If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTOINCREMENT.
+If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTO_ INCREMENT.
 
 ----
 
