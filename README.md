@@ -100,7 +100,7 @@ Before we can start working with tables we have to tell SQL what DB to use
 
 ----
 
-### DROP database 
+### DROP DATABASE *databasename*
 
 ```SQL
 DROP DATABASE MyData;
@@ -148,6 +148,7 @@ Attribute |	Description
 PRIMARY KEY | Guarenteed to be unique for each row (record).  
 AUTO_INCREMENT | Everytime a record is created, set this variable to 1 more than the previously created record.  
 NOT NULL | You can't save the record unless it has a value set for this variable.
+FOREIGN KEY...REFERENCES | This variable's contains the value of a primary key field in another table
 
 If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTO_ INCREMENT.
 
@@ -155,15 +156,17 @@ If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTO_ INC
 
 ### CREATE TABLE *tablename*
 ```SQL
-CREATE TABLE bands (id INTEGER, name VARCHAR(64) NOT NULL, label VARCHAR(64), 
+CREATE TABLE Bands (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(64) NOT NULL, label VARCHAR(64), 
                     founding_city VARCHAR, created_at DATEIME, updated_at DATETIME);
 	
-CREATE TABLE musicians (id INTEGER, label VARCHAR(64), first_name VARCHAR,
-                    last_name VARCHAR, main_instrument VARCHAR(64),  
-                    created_at DATEIME,updated_at DATETIME);
+CREATE TABLE Musicians (id INTEGER PRIMARY KEY AUTO_INCREMENT, label VARCHAR(64), first_name VARCHAR,
+                    last_name VARCHAR NOT NULL, main_instrument VARCHAR(64) NOT NULL,  
+                    created_at DATEIME, updated_at DATETIME);
 	
-CREATE TABLE band-musician (id INTEGER, band_id INTEGER, musician_id INTEGER, 
-                    created_at DATEIME, updated_at DATETIME );
+CREATE TABLE Band-Musician (id INTEGER PRIMARY KEY AUTO_INCREMENT, 
+                           band_id INTEGER FOREIGN KEY REFERENCES Bands(id), 
+			   musician_id INTEGER FOREIGN KEY REFERENCES Musicians(id), 
+                           created_at DATEIME, updated_at DATETIME );
 ```
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
