@@ -113,7 +113,6 @@ Used to start over. Delete the database and all its tables and data
 ### SQL Data Types
 Before we can define our tables, we need to know what type of data the records can contain.
 
-Each variable can also be declared as NOT NULL, meaning you can't save the record unless it has a value for the variable. See name in the CREATE TABLE statement below.
 
 Data type|	Description
 ---------|-------
@@ -141,6 +140,16 @@ INTERVAL|Composed of a number of integer fields, representing a period of time, 
 ARRAY|A set-length and ordered collection of elements
 MULTISET|A variable-length and unordered collection of elements
 XML	|Stores XML data
+
+Each variable can have attributes.
+
+Attribute |	Description
+---------|-------
+PRIMARY KEY | Guarenteed to be unique for each row (record).  
+AUTOINCREMENT | Everytime a record is created, set this variable to 1 more than the previously created record.  
+NOT NULL | You can't save the record unless it has a value set for this variable.
+
+If you name a variable ID it will be assumed to be the PRIMARY KEY and AUTOINCREMENT.
 
 ----
 
