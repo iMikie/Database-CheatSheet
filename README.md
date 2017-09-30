@@ -153,6 +153,7 @@ FOREIGN KEY...REFERENCES | This variable's contains the value of a primary key f
 ----
 
 ### CREATE TABLE *tablename*
+
 ```SQL
 CREATE TABLE Bands (id INTEGER PRIMARY KEY AUTO_INCREMENT, name VARCHAR(64) NOT NULL, label VARCHAR(64), 
                     founding_city VARCHAR, created_at DATEIME, updated_at DATETIME);
@@ -165,27 +166,48 @@ CREATE TABLE Band-Musician (id INTEGER PRIMARY KEY AUTO_INCREMENT,
                            band_id INTEGER FOREIGN KEY REFERENCES Bands(id), 
 			   musician_id INTEGER FOREIGN KEY REFERENCES Musicians(id), 
                            created_at DATEIME, updated_at DATETIME );
-```
+``` 
+
 *If a musician can only belong to one band at a time, then musicians table above could have a "band_id" field.  It would store the id of the musician's band.*
 
 ----
 
+### SHOW TABLES
+
+```SQL
+SHOW TABLES ;
+```
+
+List the tables in this database.  
+
+----
+
+### .schema	
+
+```SQL
+ .schema 
+```
+
+For Postgres databases: type .schema to the SQL command line find out what's in the database (doesn't work with mysql)
+
+----
+
 ### DESCRIBE *table* 
+
 ```SQL
 DESCRIBE musicians ;
 ```
+
 List the names and data types of the variables (columns) that make up a record in this table.  
 
-### .schema	
-```SQL
-Type .schema to the SQL command line find out what's in the database (doesn't work with mysql)
-```
 ----
+
 ### SELECT *columns* FROM *table* 
 ```SQL
 SELECT CustomerName,City FROM Customers;
 ```
 ----
+
 ### SELECT DISTINCT *columns* FROM *table* 
 ```SQL
 SELECT DISTINCT City,Country FROM Customers;
