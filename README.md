@@ -289,7 +289,7 @@ SELECT regions.region_name, states.state_name
     on regions.id=states.region_id
     ORDER BY regions.id ASC ;
 ```
-*INNER JOIN keyword selects records that have matching values in both tables.*
+*INNER JOIN selects records that have matching values in both tables.*
 
 ----
 ### COMPLEX INNER JOIN
