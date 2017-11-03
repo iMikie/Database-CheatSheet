@@ -289,7 +289,7 @@ SELECT regions.region_name, states.state_name
     on regions.id=states.region_id
     ORDER BY regions.id ASC ;
 ```
-*Use WHERE to specify which rows to update.*
+*INNER JOIN keyword selects records that have matching values in both tables.*
 
 ----
 ### COMPLEX INNER JOIN
