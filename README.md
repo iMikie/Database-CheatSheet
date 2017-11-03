@@ -290,6 +290,7 @@ SELECT regions.region_name, states.state_name
     ORDER BY regions.id ASC ;
 ```
 *INNER JOIN selects records that have matching values in both tables.*
+*Given a table of regions with a one-to-many relationship to a table of states, return rows containing each state name and the name of the region it is in.*
 
 ----
 ### COMPLEX INNER JOIN
